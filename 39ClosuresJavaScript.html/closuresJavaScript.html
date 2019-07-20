@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function crearSaludo(finalDefrase) {
+        return function(nombre) {
+          console.log(`Hola ${nombre}${finalDefrase}`);
+        };
+      }
+
+      //crea los saludos con los finales de frase
+      const saludoArgentino = crearSaludo(" che");
+      const saludoMexicano = crearSaludo(" way");
+      const saludoColombiano = crearSaludo(" parcero");
+
+      saludoArgentino("Omar"); //Hola Omar che
+      saludoMexicano("Omar"); //Hola Omar way
+      saludoColombiano("Omar"); //Hola Omar parcero
+
+      //1. Crea saludo con la final de finalDefrase
+      //2. Entra a la función que recibe el nombre y esta la toma de el saludo de cada tipo
+      //3. Imprime
+      //4. Sale de la función y vuelve a repetir el proceso con el siguiente saludo
+    </script>
+  </body>
+</html>

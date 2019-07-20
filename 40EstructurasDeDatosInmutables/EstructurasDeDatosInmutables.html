@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>EstructurasDeDatosInmutables</title>
+  </head>
+  <body>
+    <script>
+      const andres = {
+        nombre: "Andres",
+        apellido: "Leon",
+        edad: 28
+      };
+
+      const cumplenosInmutables = persona => ({
+          ...persona,
+          edad: persona.edad + 1 
+      })
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>El contecto del this</title>
+  </head>
+  <body>
+    <script>
+      const andres = {
+        nombre: "Andres",
+        apellido: "Leon",
+        edad: 28
+      };
+
+      function saludar(saludo = 'Hola') {
+        console.log(`${saludo}, mi nombre es ${this.nombre}`);
+      }
+
+      const saludarAndres = saludar.bind(andres);
+
+      setTimeout(saludar.bind(andres, 'Hola che'), 100)
+
+      saludar.call(andres, 'Hola che')
+
+      saludar.apply(andres, ['Hola che'])
+
+    </script>
+  </body>
+</html>

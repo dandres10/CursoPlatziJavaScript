@@ -6,8 +6,31 @@
     <title>Var let y const las diferencias</title>
   </head>
   <body>
-      <script>
-          
-      </script>
+    <script>
+      /*
+        let su alcance se reduce a el bloque donde se encuentre
+        var tiene un alcance en toda la hoja de js 
+        */
+      var andres = {
+        nombre: "andres",
+        apellido: "Leon",
+        edad: "22"
+      };
+      function esMayorDeEdad(persona) {
+        var mensaje;
+        if (persona.edad > 18) {
+          mensaje = "Es mayor de edad";
+        } else {
+          mensaje = "Es menor de edad";
+        }
+        console.log(mensaje);
+      }
+      //esMayorDeEdad(andres);
+
+      for (let i = 0; i < 10; i++) {
+        console.log(i);
+      }
+      console.log(`Termino el for, el valor de i es ${i}`); // probar cambiar el let por var y viseversa
+    </script>
   </body>
 </html>
